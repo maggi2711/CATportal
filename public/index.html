@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en"  ng-app="myapp">
+<head>
+	<title>CAT Portal</title>
+	<link rel="stylesheet" type="text/css" href="css/layout.css">
+	<link rel="icon" href="img/clogo.png" type="image/png" sizes="16x16">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body>
+   <section class="wrapper">
+   	<section class="container">
+   		<header>
+   			<img src="\img\logo.png" alt="logo" style="width:320px;heigth:120px">
+   			<section class="guest">
+   				 <button type="button" class="btn btn-default btn-sm"><img src="\img\guest.png" alt="guestlogo">Guest</button>
+   				 <P><button type="button" class="btn btn-info"><img src="\img\logout.png" alt="guestlogo">Log out</button></P>
+   			</section>
+   		</header>
+   		<nav class="navbar navbar-inverse">
+	  		<div class="container-fluid">
+		 		<div class="navbar-header">
+      				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span> 
+      				</button>
+    			</div>
+				<ul class="nav navbar-nav collapse navbar-collapse" id="myNavbar">
+		  			<li><a href="#/home">Home</a></li>
+		  			<li><a href="#/training">Training</a></li>
+		  			<li><a href="#/assessment">Assessment</a></li>
+				</ul>
+	  		</div>
+		</nav>
+   		<div class="login" ng-style="mystyle" ng-controller="loginCntrl" ng-init="logininit()">
+		<div class="modal-dialog userlogin">
+      <!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header" id="headModel">
+					<h4><span class="glyphicon glyphicon-lock"></span> Login Here</h4>
+				</div>
+				<!-- <div class="alert alert-info" ng-style="alertStyle">
+					<strong>Information!</strong> UserName / ID Or Password not Entered !!
+				</div>
+				<div class="alert alert-danger" ng-style="dangerStyle">
+					<strong>Caution!</strong> UserName / ID Or Password Entered is Incorrect!!
+				</div> -->
+				<div class="modal-body" id="modelBody">
+						<div class="form-group">
+							<label for="user"><span class="glyphicon glyphicon-user"></span> Username</label>
+							<input class="form-control" id="user" placeholder="Enter Employee Id" type="text" required ng-model='id'>
+						</div>
+						<div class="form-group">
+							<label for="pass"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+							<input class="form-control" id="pass" placeholder="Enter password" type="password" required ng-model='pass'>
+						</div>
+					<div class="checkbox">
+					  <label><input value="" checked type="checkbox">Remember me</label>
+					</div>
+					</br>
+					  <button type="button" class="btn btn-success btn-block" ng-click="login()" data-toggle="tooltip" data-placement="top" title="Login Here!"><span class="glyphicon glyphicon-off"></span> Login</button>
+					<div class="modal-footer">
+				    <p>Forgot <a href="" title="Please consult Administrator or ask peer to unlock account" data-content="Please consult Administrator or ask peer to unlock account">Password?</a></p>
+					</div>
+				</div> 
+			</div>
+		</div>
+	</div>
+   	</section>
+   </section>
+</body>
+</html>
